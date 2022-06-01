@@ -14,7 +14,6 @@ public with sharing class FullnameTest {
         INSERT lead;
 
         List<Lead> leadList = [SELECT id, Full_Name__c FROM Lead where FirstName = 'joHn' AND LastName ='dummY' ];
-        System.debug(leadList.get(0).Full_Name__c);
         System.assertEquals('John Dummy', leadList.get(0).Full_Name__c, 'Fullname does not match');
     }
 }
